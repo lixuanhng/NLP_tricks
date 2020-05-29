@@ -49,3 +49,12 @@ class PunctuationTransform:
         # replace English semicolon with Chinese semicolon.
         refresh_text = re.sub(';', '；', refresh_text)
         return refresh_text
+
+
+if __name__ == '__main__':
+    test_text_1 = '子在川上曰:逝者如斯夫,不舍昼夜(水).子路问曰:君子为何观水而叹?'
+    test_text_2 = '衬衫的价格是1,339.99元.'
+    text_trans_1 = PunctuationTransform(test_text_1).punctuation_transform_en_to_zh()
+    text_trans_2 = PunctuationTransform(test_text_2).punctuation_transform_en_to_zh()
+    print(text_trans_1)
+    print(text_trans_2)
