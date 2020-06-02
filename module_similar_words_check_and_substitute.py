@@ -59,3 +59,20 @@ class SimilarWordsCheck:
                             similar_count += 1
                             break
         return similar_count, processed
+
+
+# demo test
+if __name__ == '__main__':
+    texts1 = ['在与卖方签定合同后的十日内', '支付总货款的', '在履行合同期间']  # referred_group
+    texts2 = ['出卖人于合同签订后的', '按时发出货物', '在合同有效期内', '支付货物全款的']  # processed_group
+    
+    # load similar words vocabulary
+    similar_path = './lixuanhng/NLP_tricks/test_data/similar_words.txt'
+    with open(similar_path, 'r', encoding='utf-8') as file1:
+        vocab_group_list = file1.readlines()
+    vocab_group_list = [group_str.strip('\n').split(' ') for group_str in vocab_group_list]
+
+    # compare the pair components from different groups separately and find the common similar words in way of matrix
+    model = SimilarWordsCheck(texts1, texts2, vocab_group_list)
+    matrix = model.sentences_similar_matrix()
+    print(matrix)
