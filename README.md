@@ -13,3 +13,7 @@ module_Precision_Recall_F1_calculaton.py
 3. Find if the pair sentences have the similar words in each of one.
 
 module_similar_words_check_and_substitute.py
+
+4. Print split timeline when checking the train epoch result in format.
+
+printbar_split_timeline.py
