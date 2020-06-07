@@ -17,3 +17,7 @@ module_similar_words_check_and_substitute.py
 4. Print split timeline when checking the train epoch result in format.
 
 printbar_split_timeline.py
+
+5. Inherit model base class to build CNN custom model.
+
+Demo_build_custom_CNN_model.py
