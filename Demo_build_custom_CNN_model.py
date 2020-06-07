@@ -1,4 +1,4 @@
-# Inheriting Keras.Model base class to build custom model
+# Inheriting Keras.Model base class to build CNN custom model
 # Show the whole model.sunmmary(), especially the part of 'output shape'
 
 from tensorflow import keras
