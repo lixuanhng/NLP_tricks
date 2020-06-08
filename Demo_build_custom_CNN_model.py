@@ -14,7 +14,7 @@ class MLP(keras.Model):
         self.conv_1 = klayers.Conv1D(16, kernel_size=5, name = "conv_1", activation = "relu")
         self.pool_1 = klayers.MaxPool1D()
         self.conv_2 = klayers.Conv1D(128, kernel_size=2, name = "conv_2", activation = "relu")
-        self.pool_2 = klayers.MaxPool1D()
+        self.pool_2 = klayers.MaxPool1D()  # In order to show the second pool output_shape, define it again with different name.
         self.flatten = klayers.Flatten()
         self.dense = klayers.Dense(1,activation = "sigmoid")
 
@@ -46,5 +46,7 @@ class MLP(keras.Model):
 
 
 if __name__ == '__main__':
-    mlp = MLP(200)
+    max_lenght = 200  # max_length in each context
+    mlp = MLP(max_lenght)
     mlp.summary()
+    # check README.md for the output graph of Model.
