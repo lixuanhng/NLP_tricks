@@ -20,31 +20,18 @@ printbar_split_timeline.py
 
 5. Inherit model base class to build CNN custom model.
 
-Demo_build_custom_CNN_model.py
-
-and demo result as followed:
+Demo_build_custom_CNN_model.py and demo result as followed:
 
 Model: "mlp_1"
-_________________________________________________________________
-Layer (type)                 Output Shape              Param #   
-=================================================================
+layer (type)                 Output Shape              Param #   
 input_1 (InputLayer)         [(None, 200)]             0         
-_________________________________________________________________
 embedding (Embedding)        (None, 200, 7)            70000     
-_________________________________________________________________
 conv_1 (Conv1D)              (None, 196, 16)           576       
-_________________________________________________________________
 max_pooling1d (MaxPooling1D) (None, 98, 16)            0         
-_________________________________________________________________
 conv_2 (Conv1D)              (None, 97, 128)           4224      
-_________________________________________________________________
 max_pooling1d_1 (MaxPooling1 (None, 48, 128)           0         
-_________________________________________________________________
 flatten (Flatten)            (None, 6144)              0         
-_________________________________________________________________
 dense (Dense)                (None, 1)                 6145      
-=================================================================
 Total params: 80,945
 Trainable params: 80,945
 Non-trainable params: 0
-_________________________________________________________________
