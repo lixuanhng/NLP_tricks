@@ -35,3 +35,7 @@ dense (Dense)                (None, 1)                 6145
 Total params: 80,945
 Trainable params: 80,945
 Non-trainable params: 0
+
+6. Transfer list group words to dict_binary words.
+
+module_transfer_list_to_dict.py
