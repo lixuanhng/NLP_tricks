@@ -41,3 +41,5 @@ Non-trainable params: 0
 module_transfer_list_to_dict.py
 
 7. Transfer CN numbers to Abrica numbers.
+
+Module_num_transfer_from_CN_to_Africa.py
